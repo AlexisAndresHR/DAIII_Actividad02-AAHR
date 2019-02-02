@@ -1,0 +1,26 @@
+$def with(datos)
+
+<h1>Base de Datos</h1>
+
+
+<table>
+    <th>Nombre</th>
+    <th>Apellido Paterno</th>
+    <th>Apellido Materno</th>
+    <th>Edad</th>
+    <th>Telefono</th>
+    <th>Update</th>
+    <th>Delete</th>
+    $for row in datos:
+        <tr>
+            <td> <a href="/view_clientes/$row.nombre">$row.nombre</a> </td>
+            <td> <a href="/view_clientes/$row.nombre">$row.apellido_pat</a> </td>
+            <td> <a href="/view_clientes/$row.nombre">$row.apellido_mat</a> </td>
+            <td> <a href="/view_clientes/$row.nombre">$row.edad</a> </td>
+            <td> <a href="/view_clientes/$row.nombre">$row.telefono</a> </td>
+            <td> <a href="/delete_clientes/$row.nombre"> <img src="/static/images/delete-photo.png" height="23px" width="20px"> </a> </td>
+            <td> <a href="/update_clientes/$row.nombre"> <img src="/static/images/refresh.png" height="23px" width="23px"> </a> </td>
+        </tr>
+</table>
+<br>
+<a href="/insert_clientes"> <img src="/static/images/add-dock.png" height="40px" width="40px"> Insertar Clientes</a>
